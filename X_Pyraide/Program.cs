@@ -15,9 +15,21 @@
                 {
                     Console.Write("X");
                 }
-                Console.WriteLine();
+                Console.WriteLine();      // zeilenumbruch nach jeder Stufe
             }
-        }
+            for (int a = stufen - 1; a >= 1; a--) // sorgt dafür, dass die Pyramide auch wieder nach unten geht
+            {
+                for (int b = 1; b <= stufen - a; b++) // sorgt dafür, dass die abstände zwischen den stufen auch wieder nach unten gehen
+                {
+                    Console.Write(" ");
+                }
+                for (int c = 1; c <= (2 * a - 1); c++) // sorgt dafür, dass die X's in den stufen auch wieder nach unten gehen
+                {
+                    Console.Write("X");
+                }
+                Console.WriteLine();   // zeilenumbruch nach jeder Stufe
+            }
+        }   
     }
 }
 
